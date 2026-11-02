@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 320" width="1000" height="320">
+  <defs>
+    <filter id="markShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Transparent or Light/Dark adaptive Lockup -->
+  <g transform="translate(70, 70)">
+    <!-- Brand Mark: Rotated Lime Box -->
+    <g transform="translate(85, 85)">
+      <g transform="rotate(-7)" filter="url(#markShadow)">
+        <rect x="-70" y="-70" width="140" height="140" rx="34" fill="#c7f36b"/>
+        <text x="0" y="26" 
+              font-family="'Trebuchet MS', -apple-system, Arial, sans-serif" 
+              font-size="84" 
+              font-weight="900" 
+              fill="#17221c" 
+              text-anchor="middle">↗</text>
+      </g>
+    </g>
+
+    <!-- Wordmark -->
+    <text x="180" y="105" 
+          font-family="'Trebuchet MS', -apple-system, BlinkMacSystemFont, Arial, sans-serif" 
+          font-size="110" 
+          font-weight="900" 
+          letter-spacing="-5" 
+          fill="#17221c">hooklab</text>
+
+    <!-- Tagline underneath -->
+    <text x="185" y="150" 
+          font-family="Georgia, 'Times New Roman', serif" 
+          font-style="italic" 
+          font-size="28" 
+          fill="#68823f" 
+          letter-spacing="-0.4">make the first seconds count</text>
+  </g>
+</svg>

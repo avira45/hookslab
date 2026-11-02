@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HookLab — YouTube Brand Assets &amp; Channel Kit</title>
+<style>
+:root{--paper:#f5f4ef;--ink:#17221c;--muted:#747b73;--line:#d9ddd3;--lime:#c7f36b;--white:#fff;--dark:#1b2921;--sans:'Trebuchet MS',Arial,sans-serif;--serif:Georgia,serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;padding:36px 20px}
+.container{max-width:1100px;margin:auto}
+.header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:32px;flex-wrap:wrap;gap:16px}
+.brand{font-size:26px;font-weight:900;letter-spacing:-1.2px;display:flex;align-items:center;gap:12px}
+.brand-mark{width:32px;height:32px;background:var(--lime);border-radius:9px;display:grid;place-items:center;font-size:17px;transform:rotate(-7deg);font-weight:bold}
+.subtitle{color:var(--muted);font-size:14px;margin:6px 0 0}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.card-head{margin-bottom:16px}
+.card-title{font-size:17px;font-weight:800;margin:0 0 6px}
+.card-desc{font-size:12px;color:var(--muted);margin:0}
+
+.preview-box{background:#17221c;border-radius:10px;padding:20px;display:grid;place-items:center;min-height:220px;overflow:hidden;margin:14px 0}
+.preview-box.light{background:#f8faf6;border:1px dashed #d5dacd}
+.preview-box img{max-width:100%;max-height:180px;object-fit:contain}
+
+.banner-preview{background:#17221c;border-radius:10px;padding:12px;display:grid;place-items:center;min-height:150px;margin:14px 0}
+.banner-preview img{width:100%;border-radius:6px;object-fit:cover}
+
+.download-btn{width:100%;height:44px;background:var(--lime);color:#152018;border:none;border-radius:8px;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:.15s}
+.download-btn:hover{background:#b8eb55;transform:translateY(-1px)}
+.download-btn.dark{background:var(--dark);color:#fff}
+.download-btn.dark:hover{background:#2c4034}
+
+.section-title{font-size:22px;font-weight:900;letter-spacing:-0.5px;margin:40px 0 20px}
+.channel-kit{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.field-group{margin-bottom:20px}
+.field-label{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:#71806c;margin-bottom:8px}
+.copy-pill{background:none;border:1px solid #dfe5d6;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:800;color:#526345;cursor:pointer}
+.copy-pill:hover{background:#f0f5e7}
+.field-content{background:#fbfcf9;border:1px solid #e1e5dc;border-radius:8px;padding:12px 16px;font-size:13px;line-height:1.6;white-space:pre-wrap;color:#243028}
+
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,15px);opacity:0;background:#17221c;color:#fff;padding:11px 18px;border-radius:8px;font-size:13px;transition:.2s;pointer-events:none;z-index:99}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div>
+      <div class="brand"><span class="brand-mark">↗</span>hooklab</div>
+      <p class="subtitle">Official Branding Assets &amp; YouTube Channel Kit</p>
+    </div>
+    <div style="font-size:12px;color:var(--muted)">
+      Ready for YouTube Studio, Instagram, &amp; TikTok
+    </div>
+  </header>
+
+  <!-- Graphic Assets Grid -->
+  <div class="grid">
+    <!-- Card 1: Avatar -->
+    <div class="card">
+      <div class="card-head">
+        <h2 class="card-title">YouTube Profile Picture (Avatar)</h2>
+        <p class="card-desc">800 × 800 px · Dark background with signature rotated neon lime badge.</p>
+      </div>
+      <div class="preview-box">
+        <img id="avatar-img" src="logo-avatar.svg" alt="HookLab YouTube Avatar">
+      </div>
+      <button class="download-btn" id="dl-avatar">Download 800×800 PNG ↗</button>
+    </div>
+
+    <!-- Card 2: Full Horizontal Logo -->
+    <div class="card">
+      <div class="card-head">
+        <h2 class="card-title">Full Logo Lockup</h2>
+        <p class="card-desc">1000 × 320 px · Transparent background lockup for video watermarks &amp; website.</p>
+      </div>
+      <div class="preview-box light">
+        <img id="full-img" src="logo-full.svg" alt="HookLab Full Logo">
+      </div>
+      <button class="download-btn dark" id="dl-full">Download Transparent PNG ↗</button>
+    </div>
+
+    <!-- Card 3: Channel Banner -->
+    <div class="card" style="grid-column: 1 / -1">
+      <div class="card-head">
+        <h2 class="card-title">YouTube Channel Banner Art</h2>
+        <p class="card-desc">2560 × 1440 px · Perfectly aligned with YouTube's 1546×423 safe area across mobile, tablet, desktop &amp; TV.</p>
+      </div>
+      <div class="banner-preview">
+        <img id="banner-img" src="youtube-banner.svg" alt="HookLab YouTube Banner">
+      </div>
+      <button class="download-btn" id="dl-banner">Download 2560×1440 Banner PNG ↗</button>
+    </div>
+  </div>
+
+  <!-- YouTube Channel Copy Kit -->
+  <h2 class="section-title">📺 YouTube Channel Setup Kit</h2>
+  <div class="channel-kit">
+    <div class="field-group">
+      <div class="field-label">
+        <span>Channel Name</span>
+        <button class="copy-pill" data-copy="name">Copy Name</button>
+      </div>
+      <div class="field-content" id="copy-name">HookLab</div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>Handle</span>
+        <button class="copy-pill" data-copy="handle">Copy Handle</button>
+      </div>
+      <div class="field-content" id="copy-handle">@hooks_lab</div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>Channel Tagline</span>
+        <button class="copy-pill" data-copy="tagline">Copy Tagline</button>
+      </div>
+      <div class="field-content" id="copy-tagline">Make the first seconds count.</div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>Channel Description (About Section - SEO Optimized)</span>
+        <button class="copy-pill" data-copy="desc">Copy Description</button>
+      </div>
+      <div class="field-content" id="copy-desc">Welcome to HookLab — the short-form writing studio built to help creators stop the scroll in the first 3 seconds.
+
+On this channel, we break down:
+⚡ High-converting viral hooks for YouTube Shorts, Instagram Reels &amp; TikTok
+🧠 Viewer psychology &amp; retention secrets that keep audiences watching till the end
+📝 Plug-and-play script frameworks, storytelling templates &amp; sound ideas
+📈 Growth breakdowns of trending creators &amp; viral formats
+
+Make your video ideas impossible to scroll past.
+
+🔗 Post Kit Generator: https://hooklab.co
+📸 Instagram: @hooks_lab
+✉️ Inquiries &amp; Support: aviralchaurasia87@gmail.com</div>
+    </div>
+
+    <div class="field-group" style="margin-bottom:0">
+      <div class="field-label">
+        <span>Channel Keywords / Tags (Paste into YouTube Studio > Settings > Channel)</span>
+        <button class="copy-pill" data-copy="tags">Copy Tags</button>
+      </div>
+      <div class="field-content" id="copy-tags">hooklab, hooks lab, viral hooks, youtube shorts hooks, reel hooks, tiktok hooks, video hooks, short form content, content creation, retention editing, viral script templates, how to make viral shorts, reels growth, youtube shorts algorithm</div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- Canvas for client-side SVG to PNG rasterization -->
+<canvas id="export-canvas" style="display:none"></canvas>
+
+<script>
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+// 1-Click Copy Handlers
+document.querySelectorAll('.copy-pill').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const text = document.getElementById('copy-' + btn.dataset.copy).textContent;
+    navigator.clipboard.writeText(text).then(() => toast('Copied to clipboard!'));
+  });
+});
+
+// SVG to PNG Converter & Downloader
+function downloadSvgAsPng(svgUrl, fileName, width, height) {
+  toast('Generating high-res PNG...');
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = function() {
+    const canvas = document.getElementById('export-canvas');
+    canvas.width = width;
+    canvas.height = height;
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, width, height);
+    ctx.drawImage(img, 0, 0, width, height);
+    
+    canvas.toBlob(function(blob) {
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = fileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      toast('Downloaded ' + fileName);
+    }, 'image/png');
+  };
+  img.src = svgUrl;
+}
+
+document.getElementById('dl-avatar').addEventListener('click', () => {
+  downloadSvgAsPng('logo-avatar.svg', 'hooklab-youtube-avatar-800x800.png', 800, 800);
+});
+
+document.getElementById('dl-full').addEventListener('click', () => {
+  downloadSvgAsPng('logo-full.svg', 'hooklab-logo-full-1000x320.png', 1000, 320);
+});
+
+document.getElementById('dl-banner').addEventListener('click', () => {
+  downloadSvgAsPng('youtube-banner.svg', 'hooklab-youtube-banner-2560x1440.png', 2560, 1440);
+});
+</script>
+</body>
+</html>
